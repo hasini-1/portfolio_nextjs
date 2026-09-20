@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+:root {
+  --background: transparent;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: transparent;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ========================================================= */
+/* SUN RAYS */
+/* ========================================================= */
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 18s linear infinite;
+}
+
+/* ========================================================= */
+/* RAIN */
+/* ========================================================= */
+
+@keyframes rain {
+  0% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+.animate-rain {
+  animation: rain 1s linear infinite;
+}
+
+/* ========================================================= */
+/* SNOW */
+/* ========================================================= */
+
+@keyframes snow {
+  0% {
+    transform: translateY(-10vh) translateX(0);
+  }
+
+  50% {
+    transform: translateY(50vh) translateX(30px);
+  }
+
+  100% {
+    transform: translateY(110vh) translateX(-20px);
+  }
+}
+
+.animate-snow {
+  animation: snow 6s linear infinite;
+}
+
+/* ========================================================= */
+/* STARS */
+/* ========================================================= */
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+/* ========================================================= */
+/* CLOUDS */
+/* ========================================================= */
+
+@keyframes cloud {
+  0% {
+    transform: translateX(-10%);
+  }
+
+  50% {
+    transform: translateX(20%);
+  }
+
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.animate-cloud {
+  animation: cloud 20s ease-in-out infinite;
+}
+
+.animate-cloud-slow {
+  animation: cloud 35s ease-in-out infinite reverse;
+}
+
+/* ========================================================= */
+/* LIGHTNING */
+/* ========================================================= */
+
+@keyframes lightning {
+  0%,
+  90%,
+  94%,
+  100% {
+    opacity: 0;
+  }
+
+  91%,
+  93% {
+    opacity: 0.35;
+  }
+
+  92% {
+    opacity: 0.8;
+  }
+}
+
+.animate-lightning {
+  animation: lightning 7s infinite;
+}

@@ -1,0 +1,32 @@
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Education from "@/components/Education";
+import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
+import Achievements from "@/components/Achievements";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import WeatherBackground from "@/components/WeatherBackground";
+
+export default function Home() {
+  return (
+    <>
+    <WeatherBackground />
+      <Navbar />
+
+      <main>
+        <Hero />
+        <About />
+        <Education />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Achievements />
+        <Contact />
+        <Footer />
+      </main>
+    </>
+  );
+}
